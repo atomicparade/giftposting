@@ -151,6 +151,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
     padding: 1.5em 1em 0;
     gap: 3em 1.2em;
 }
