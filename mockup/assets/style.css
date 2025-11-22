@@ -1,0 +1,426 @@
+body {
+    font: 16px 'Arial Rounded MT', sans-serif;
+    margin: 2em 4em;
+    padding: 0;
+    transition: color 0.5s;
+}
+
+h1 {
+    font-family: 'Segoe Script', 'Arial Rounded MT', sans-serif;
+    text-align: center;
+    letter-spacing: -2px;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1em;
+    display: block;
+    margin: 0 0 1em;
+    padding: 1.1em .8em .6em;
+    transition: background 0.5s, color 0.5s, border 0.5s;
+}
+
+nav a.selected {
+    text-decoration: underline;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.present {
+    display: inline-block;
+}
+
+.present .top {
+    width: 57px;
+    height: 32px;
+    position: relative;
+    z-index: 100;
+    transform-origin: 0% 0%;
+    transition: transform 0.2s;
+}
+
+.selected .present .top {
+    transform: rotate(-10deg) translateX(-5px) translateY(-5px);
+}
+
+.unselected .present .top {
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+}
+
+.present .bottom {
+    width: 57px;
+    height: 46px;
+    margin-top: -22px;
+    position: relative;
+    z-index: 90;
+}
+
+.present1 .top {
+    background: url(images/present1-top.svg);
+}
+
+.present1 .bottom {
+    background: url(images/present1-bottom.svg);
+}
+
+.present2 .top {
+    background: url(images/present2-top.svg);
+}
+
+.present2 .bottom {
+    background: url(images/present2-bottom.svg);
+}
+
+.present3 .top {
+    background: url(images/present3-top.svg);
+}
+
+.present3 .bottom {
+    background: url(images/present3-bottom.svg);
+}
+
+.present4 .top {
+    background: url(images/present4-top.svg);
+}
+
+.present4 .bottom {
+    background: url(images/present4-bottom.svg);
+}
+
+.present5 .top {
+    background: url(images/present5-top.svg);
+}
+
+.present5 .bottom {
+    background: url(images/present5-bottom.svg);
+}
+
+.present6 .top {
+    background: url(images/present6-top.svg);
+}
+
+.present6 .bottom {
+    background: url(images/present6-bottom.svg);
+}
+
+.present7 .top {
+    background: url(images/present7-top.svg);
+}
+
+.present7 .bottom {
+    background: url(images/present7-bottom.svg);
+}
+
+.present8 .top {
+    background: url(images/present8-top.svg);
+}
+
+.present8 .bottom {
+    background: url(images/present8-bottom.svg);
+}
+
+.present9 .top {
+    background: url(images/present9-top.svg);
+}
+
+.present9 .bottom {
+    background: url(images/present9-bottom.svg);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.5em 1em 0;
+    gap: 3em 1.2em;
+}
+
+section {
+    min-height: 7em;
+    width: 400px;
+    position: relative;
+}
+
+.tag {
+    font: 1em 'Segoe Script', 'Arial Rounded MT', sans-serif;
+    font-size: 0.9em;
+    letter-spacing: -1px;
+    width: 360px;
+    height: 49px;
+    transform-origin: 0 0;
+    transform: rotate(-5deg);
+    padding: 4px 0 0 40px;
+}
+
+label {
+    width: 40px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+input {
+    font: 1em 'Segoe Script', 'Arial Rounded MT', sans-serif;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 290px;
+    letter-spacing: -1px;
+}
+
+.tag p {
+    margin: 0;
+}
+
+.note-top {
+    width: 400px;
+    height: 35px;
+    margin-top: -7px;
+}
+
+.note-middle {
+    width: 400px;
+    min-height: 1.2em;
+    margin-top: -6px;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.note-middle, .note-middle * {
+    font: 1em 'Tahoma', sans-serif;
+    margin: 0;
+}
+
+.note-middle textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5em 0;
+}
+
+.note-middle button {
+    padding: 0.2em 0.4em;
+}
+
+.note-middle .post {
+    display: flex;
+}
+
+.note-middle .post .content {
+    flex: 1;
+}
+
+.note-middle .post .post-controls button {
+    color: #f00;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.note-middle .post .post-controls button:active {
+    position: relative;
+    top: 0.2em;
+    left: 0.2em;
+}
+
+.note-middle .note-controls {
+    text-align: right;
+    margin: 0;
+}
+
+.note-bottom {
+    width: 400px;
+    height: 15px;
+}
+
+.blue, .blue input { color: #57c; }
+.blue .tag { background: url(images/blue-tag.svg) no-repeat 2.7px; }
+.blue .note-top { background: url(images/blue-note-top.svg) no-repeat; }
+.blue .note-middle { background: url(images/blue-note-middle.svg) repeat-y; }
+.blue .note-bottom { background: url(images/blue-note-bottom.svg) no-repeat; }
+.green, .green input { color: #060; }
+.green .tag { background: url(images/green-tag.svg) no-repeat 2.7px; }
+.green .note-top { background: url(images/green-note-top.svg) no-repeat; }
+.green .note-middle { background: url(images/green-note-middle.svg) repeat-y; }
+.green .note-bottom { background: url(images/green-note-bottom.svg) no-repeat; }
+.orange, .orange input { color: #962; }
+.orange .tag { background: url(images/orange-tag.svg) no-repeat 2.7px; }
+.orange .note-top { background: url(images/orange-note-top.svg) no-repeat; }
+.orange .note-middle { background: url(images/orange-note-middle.svg) repeat-y; }
+.orange .note-bottom { background: url(images/orange-note-bottom.svg) no-repeat; }
+.pink, .pink input { color: #b58; }
+.pink .tag { background: url(images/pink-tag.svg) no-repeat 2.7px; }
+.pink .note-top { background: url(images/pink-note-top.svg) no-repeat; }
+.pink .note-middle { background: url(images/pink-note-middle.svg) repeat-y; }
+.pink .note-bottom { background: url(images/pink-note-bottom.svg) no-repeat; }
+.purple, .purple input { color: #a7b; }
+.purple .tag { background: url(images/purple-tag.svg) no-repeat 2.7px; }
+.purple .note-top { background: url(images/purple-note-top.svg) no-repeat; }
+.purple .note-middle { background: url(images/purple-note-middle.svg) repeat-y; }
+.purple .note-bottom { background: url(images/purple-note-bottom.svg) no-repeat; }
+.red, .red input { color: #a44; }
+.red .tag { background: url(images/red-tag.svg) no-repeat 2.7px; }
+.red .note-top { background: url(images/red-note-top.svg) no-repeat; }
+.red .note-middle { background: url(images/red-note-middle.svg) repeat-y; }
+.red .note-bottom { background: url(images/red-note-bottom.svg) no-repeat; }
+.teal, .teal input { color: #088; }
+.teal .tag { background: url(images/teal-tag.svg) no-repeat 2.7px; }
+.teal .note-top { background: url(images/teal-note-top.svg) no-repeat; }
+.teal .note-middle { background: url(images/teal-note-middle.svg) repeat-y; }
+.teal .note-bottom { background: url(images/teal-note-bottom.svg) no-repeat; }
+.white, .white input { color: #888; }
+.white .tag { background: url(images/white-tag.svg) no-repeat 2.7px; }
+.white .note-top { background: url(images/white-note-top.svg) no-repeat; }
+.white .note-middle { background: url(images/white-note-middle.svg) repeat-y; }
+.white .note-bottom { background: url(images/white-note-bottom.svg) no-repeat; }
+.yellow, .yellow input { color: #970; }
+.yellow .tag { background: url(images/yellow-tag.svg) no-repeat 2.7px; }
+.yellow .note-top { background: url(images/yellow-note-top.svg) no-repeat; }
+.yellow .note-middle { background: url(images/yellow-note-middle.svg) repeat-y; }
+.yellow .note-bottom { background: url(images/yellow-note-bottom.svg) no-repeat; }
+
+body.body1 {
+    background: url(images/bg1.png) repeat;
+    color: #e7c;
+}
+
+body.body1 nav a, body.body1 nav a:visited {
+    color: #e7c;
+    background: rgba(240, 190, 220, 0.5);
+    border-color: #d8b;
+}
+
+body.body1 nav a:hover {
+    background: rgba(255, 238, 255, 0.5);
+}
+
+body.body2 {
+    background: url(images/bg2.png) repeat;
+    color: #75a;
+}
+
+body.body2 nav a, body.body2 nav a:visited {
+    color: #73a;
+    background: rgba(210, 180, 240, 0.5);
+    border-color: #baf;
+}
+
+body.body2 nav a:hover {
+    background: rgba(238, 231, 255, 0.5);
+}
+
+body.body3 {
+    background: url(images/bg3.png) repeat;
+    color: #e37;
+}
+
+body.body3 nav a, body.body3 nav a:visited {
+    color: #a80;
+    background: rgba(245, 225, 140, 0.5);
+    border-color: rgb(240, 210, 140);
+}
+
+body.body3 nav a:hover {
+    background: rgba(255, 250, 180, 0.5);
+}
+
+body.body4 {
+    background: url(images/bg4.png);
+    color: #006;
+}
+
+body.body4 nav a, body.body4 nav a:visited {
+    color: #006;
+    background: rgba(190, 220, 240, 0.6);
+    border-color: #8bf;
+}
+
+body.body4 nav a:hover {
+    background: rgba(238, 252, 255, 0.5);
+}
+
+body.body5 {
+    background: repeating-linear-gradient(
+        -45deg,
+        #bfc,
+        #bfc 15px,
+        #abf8bc 15px,
+        #abf8bc 30px
+    );
+
+    color: #060;
+}
+
+body.body5 nav a, body.body5 nav a:visited {
+    color: #364;
+    background: rgba(170, 245, 175, 0.6);
+    border-color: #9d9;
+}
+
+body.body5 nav a:hover {
+    background: rgba(221, 255, 221, 0.5);
+}
+
+body.body6 {
+    background: url(images/bg6.png) repeat;
+    color: #ddd;
+}
+
+body.body6 nav a, body.body6 nav a:visited {
+    color: #ddd;
+    background: rgba(100, 30, 20, 0.5);
+    border-color: rgb(70, 20, 10);
+}
+
+body.body6 nav a:hover {
+    background: rgba(150, 70, 50, 0.5);
+}
+
+body.body7 {
+    background: url(images/bg7.png) repeat;
+    color: #def;
+}
+
+body.body7 nav a, body.body7 nav a:visited {
+    color: #def;
+    background: rgba(40, 60, 100, 0.5);
+    border-color: rgb(70, 90, 110);
+}
+
+body.body7 nav a:hover {
+    background: rgba(90, 110, 160, 0.5);
+}
+
+body.body8 {
+    background: url(images/bg8.png) repeat;
+    color: #063;
+}
+
+body.body8 nav a, body.body8 nav a:visited {
+    color: #006;
+    background: rgba(190, 220, 240, 0.6);
+    border-color: #8bf;
+}
+
+body.body8 nav a:hover {
+    background: rgba(238, 252, 255, 0.5);
+}
