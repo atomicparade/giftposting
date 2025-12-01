@@ -1,6 +1,46 @@
+@media (max-width: 599px) {
+    body {
+        margin: 1em;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        justify-content: space-evenly;
+    }
+
+    main {
+        margin-top: 1em;
+    }
+
+    .present {
+        display: block;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        margin: 2em 4em;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 body {
     font: 16px 'Arial Rounded MT', sans-serif;
-    margin: 2em 4em;
     padding: 0;
     transition: color 0.5s;
 }
@@ -9,11 +49,6 @@ h1 {
     font-family: 'Segoe Script', 'Arial Rounded MT', sans-serif;
     text-align: center;
     letter-spacing: -2px;
-}
-
-#wrapper {
-    display: flex;
-    flex-direction: row;
 }
 
 nav ul {
